@@ -16,8 +16,9 @@ export const profile = {
   phone: { display: "0961 959 271", tel: "+84961959271" },
   github: "https://github.com/dothanhloan",
   linkedin: "https://www.linkedin.com/in/%C4%91%E1%BB%97-th%E1%BB%8B-thanh-loan-138061409/" as string | null,
-  // Put your CV at public/cv/DoThiThanhLoan_BA_CV.pdf
-  cv: "/cv/DoThiThanhLoan_BA_CV.pdf",
+  // Put your CV at public/cv/DoThiThanhLoan_BA_CV.pdf.
+  // Bump ?v= whenever the PDF changes so browsers don't serve a cached copy.
+  cv: "/cv/DoThiThanhLoan_BA_CV.pdf?v=3",
 };
 
 export const hero = {
