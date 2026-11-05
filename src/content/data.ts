@@ -19,7 +19,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/%C4%91%E1%BB%97-th%E1%BB%8B-thanh-loan-138061409/" as string | null,
   // Put your CV at public/cv/DoThiThanhLoan_BA_CV.pdf.
   // Bump ?v= whenever the PDF changes so browsers don't serve a cached copy.
-  cv: "/cv/DoThiThanhLoan_BA_CV.pdf?v=4",
+  cv: "/cv/DoThiThanhLoan_BA_CV.pdf?v=5",
 };
 
 export const hero = {
@@ -163,8 +163,8 @@ export const timeline: TimelineItem[] = [
         vi: "Hỗ trợ xác định phạm vi yêu cầu cho giai đoạn gợi ý món ăn trên màn hình chính, gồm kế hoạch A/B test gợi ý merchant.",
       },
       {
-        en: "Wrote the PRD/BRD for AI Buddy, an AI onboarding assistant for new joiners; ran user surveys to find pain points and also served as tester.",
-        vi: "Viết PRD/BRD cho AI Buddy, trợ lý AI onboarding cho nhân viên mới; khảo sát người dùng để tìm pain point và trực tiếp kiểm thử.",
+        en: "Wrote the PRD/BRD for an internal AI product (details confidential); ran user surveys to find pain points and also served as tester.",
+        vi: "Viết PRD/BRD cho một sản phẩm AI nội bộ (thông tin bảo mật); khảo sát người dùng để tìm pain point và trực tiếp kiểm thử.",
       },
     ],
     photos: [
@@ -246,24 +246,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "ai-buddy",
-    title: "AI Buddy",
+    slug: "internal-ai",
+    title: "Internal AI Project (Confidential)",
     featured: true,
     tagline: {
-      en: "An AI onboarding assistant for new joiners at GSM's AI division: answers questions 24/7 from an approved knowledge base and guides each person through a 15-day onboarding roadmap.",
-      vi: "Trợ lý AI onboarding cho người mới tại Khối AI GSM: trả lời câu hỏi 24/7 từ Knowledge Base đã duyệt và dẫn dắt từng người qua lộ trình onboarding 15 ngày.",
+      en: "An internal AI product. Product details are confidential, so this page covers only my role and what I delivered.",
+      vi: "Một sản phẩm AI nội bộ. Thông tin sản phẩm được bảo mật, nên trang này chỉ trình bày vai trò và những việc tôi đã làm.",
     },
     role: { en: "Business Analyst & Quality Control", vi: "Business Analyst & Quality Control" },
     period: { en: "Sep – Oct 2026", vi: "09 – 10/2026" },
-    shots: [
-      {
-        src: "/images/projects/ai-buddy-roadmap.png",
-        caption: {
-          en: "The 15-day onboarding roadmap — milestones unlock step by step to avoid information overload",
-          vi: "Lộ trình onboarding 15 ngày — các cột mốc mở khóa dần để tránh quá tải thông tin",
-        },
-      },
-    ],
     tags: ["PRD", "Personas", "User Journeys", "Use Cases", "NFRs", "Acceptance Criteria", "RAG Evaluation", "Guardrails", "Regression Testing"],
     metrics: [
       { value: "51% → 87%", label: { en: "Regression pass rate", vi: "Pass rate regression" } },
@@ -273,52 +264,19 @@ export const projects: Project[] = [
     ],
     sections: [
       {
-        heading: { en: "The problem", vi: "Vấn đề" },
-        body: {
-          en: "New joiners at the AI division needed 30–45 days to become productive. Onboarding knowledge was scattered across SharePoint, Confluence, Teams and personal files, often outdated or contradictory, and every department onboarded people its own way.",
-          vi: "Người mới tại Khối AI cần 30–45 ngày để làm việc hiệu quả. Tri thức onboarding nằm rải rác trên SharePoint, Confluence, Teams và file cá nhân, nhiều tài liệu lỗi thời hoặc mâu thuẫn, và mỗi phòng ban hướng dẫn theo một cách riêng.",
-        },
-        points: [
-          {
-            en: "No checklist or clear expectations for the first days and weeks; new joiners were overloaded but did not know where to start.",
-            vi: "Không có checklist hay kỳ vọng rõ ràng cho những ngày, tuần đầu; người mới quá tải thông tin nhưng không biết bắt đầu từ đâu.",
-          },
-          {
-            en: "Every answer depended on a person (Buddy, Line Manager, HR, IT), so the same questions came back with each intake, and many new joiners hesitated to ask at all.",
-            vi: "Mọi câu trả lời đều phụ thuộc vào con người (Buddy, Line Manager, HR, IT), nên cùng một câu hỏi bị lặp lại qua mỗi đợt tuyển, và nhiều người mới ngại hỏi.",
-          },
-          {
-            en: "Tool access was requested manually with no single point of contact, and there was no data on who was stuck or falling behind.",
-            vi: "Cấp quyền công cụ làm thủ công, không có đầu mối theo dõi, và không có dữ liệu cho biết ai đang vướng hay đang chậm.",
-          },
-        ],
-      },
-      {
-        heading: { en: "Goals", vi: "Mục tiêu" },
-        points: [
-          { en: "Cut Time-to-Productivity from 30–45 days to 15 days.", vi: "Rút ngắn Time-to-Productivity từ 30–45 ngày xuống 15 ngày." },
-          { en: "Self-service rate of at least 70% — questions answered without asking a person.", vi: "Tỷ lệ tự phục vụ tối thiểu 70% — câu hỏi được trả lời mà không cần hỏi người." },
-          { en: "Reduce repeated questions to Buddies and Line Managers by at least 50%.", vi: "Giảm ít nhất 50% câu hỏi lặp lại tới Buddy và Line Manager." },
-          {
-            en: "North Star: at least 70% of onboarding questions fully resolved — no follow-up, no hand-off to a human, no thumbs-down.",
-            vi: "North Star: tối thiểu 70% câu hỏi onboarding được giải quyết trọn vẹn — không hỏi lại, không chuyển người thật, không bị 👎.",
-          },
-        ],
-      },
-      {
         heading: { en: "My role as BA", vi: "Vai trò BA" },
         points: [
           {
-            en: "Ran user surveys with new joiners and HR, turning the findings into 12 pain points, each mapped to a solution and a delivery phase.",
-            vi: "Khảo sát người mới và HR, tổng hợp thành 12 pain point, mỗi pain point gắn với giải pháp và giai đoạn triển khai.",
+            en: "Ran user surveys with end users and stakeholders, turning the findings into prioritized pain points, each mapped to a solution and a delivery phase.",
+            vi: "Khảo sát người dùng cuối và các bên liên quan, tổng hợp thành các pain point có thứ tự ưu tiên, mỗi pain point gắn với giải pháp và giai đoạn triển khai.",
           },
           {
-            en: "Authored PRD v2, turning the PMO's initial draft into a complete PRD: context, goals and North Star, personas, day-by-day user journeys for both flows, and the 3-phase roadmap.",
-            vi: "Soạn PRD V2, chuẩn hóa bản nháp ban đầu của PMO thành PRD đầy đủ: bối cảnh, mục tiêu và North Star, persona, user journey theo ngày cho cả hai luồng, và roadmap 3 giai đoạn.",
+            en: "Authored PRD v2, turning the initial draft into a complete PRD: context, goals and success metrics, personas, user journeys, and the phased roadmap.",
+            vi: "Soạn PRD V2, chuẩn hóa bản nháp ban đầu thành PRD đầy đủ: bối cảnh, mục tiêu và chỉ số thành công, persona, user journey, và roadmap theo giai đoạn.",
           },
           {
-            en: "Specified 10 capabilities and 10 use cases, the non-functional requirements, knowledge-base requirements across 10 data groups, and the conversation design (persona, tone, answer structure, fallback and human hand-off).",
-            vi: "Đặc tả 10 capability và 10 use case, yêu cầu phi chức năng, yêu cầu Knowledge Base cho 10 nhóm dữ liệu, và conversation design (persona, giọng điệu, cấu trúc câu trả lời, fallback và chuyển người thật).",
+            en: "Specified the capabilities and use cases, non-functional requirements, knowledge-base requirements, and the conversation design (tone, answer structure, fallback and human hand-off).",
+            vi: "Đặc tả các capability và use case, yêu cầu phi chức năng, yêu cầu Knowledge Base, và conversation design (giọng điệu, cấu trúc câu trả lời, fallback và chuyển người thật).",
           },
           {
             en: "Defined KPIs, acceptance criteria per use case, the MVP Definition of Done, risks and assumptions, the pilot plan with go/no-go criteria, and the RACI.",
@@ -353,8 +311,8 @@ export const projects: Project[] = [
           { en: "Regression pass rate rose from 51% to 87%.", vi: "Pass rate regression tăng từ 51% lên 87%." },
           { en: "Recall@1 improved from 79.2% to 97.5%; MRR@10 from 0.86 to 0.98.", vi: "Recall@1 tăng từ 79,2% lên 97,5%; MRR@10 từ 0,86 lên 0,98." },
           {
-            en: "Answer correctness reached 88.7% — above the PRD's 85% accuracy target — with zero fabricated values.",
-            vi: "Độ đúng câu trả lời đạt 88,7% — vượt ngưỡng 85% trong PRD — không có giá trị bịa đặt.",
+            en: "Answer correctness reached 88.7% — above the 85% accuracy target — with zero fabricated values.",
+            vi: "Độ đúng câu trả lời đạt 88,7% — vượt ngưỡng 85% đề ra — không có giá trị bịa đặt.",
           },
           { en: "100% pass on guardrail tests (15/15).", vi: "Đạt 100% guardrail test (15/15)." },
         ],
