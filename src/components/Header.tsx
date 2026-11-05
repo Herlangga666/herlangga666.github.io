@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Download, Mail, MapPin } from "lucide-react";
+import { ArrowRight, Cake, Download, Mail, MapPin } from "lucide-react";
 import { useEffect, useState } from "react";
 import { hero, profile, ui } from "@/content/data";
 import { useSite } from "./Providers";
@@ -25,6 +25,9 @@ export function Header() {
           <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-muted">
             <span className="inline-flex items-center gap-1.5">
               <MapPin size={14} /> {t(profile.location)}
+            </span>
+            <span className="inline-flex items-center gap-1.5">
+              <Cake size={14} /> {t(profile.birthDate)}
             </span>
             <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-1.5 hover:text-accent">
               <Mail size={14} /> {profile.email}

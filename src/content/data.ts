@@ -12,6 +12,7 @@ export const profile = {
   avatar: "/images/avatar.jpg" as string | null,
   title: { en: "Business Analyst · QA/QC for AI products", vi: "Business Analyst · QA/QC cho sản phẩm AI" },
   location: { en: "Hanoi, Vietnam", vi: "Hà Nội, Việt Nam" },
+  birthDate: { en: "Born 27/01/2004", vi: "Sinh ngày 27/01/2004" },
   email: "loanlamk8@gmail.com",
   phone: { display: "0961 959 271", tel: "+84961959271" },
   github: "https://github.com/dothanhloan",
